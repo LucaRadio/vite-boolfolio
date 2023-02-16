@@ -33,12 +33,14 @@ export default {
                   <h5 class="card-title">{{singleProject.name}}</h5>
                   <p class="card-text">{{ singleProject.description }}</p>
                   <p class="card-text" v-if=" singleProject.github_link">{{ singleProject.github_link }}</p>
+                  <p class="card-text text-warning" v-if=" singleProject.type">
+                    Type of Project : {{ singleProject.type.name }}</p>
                   <div class="card-text">
                     Used technologies:
                     <div class="card-text" v-if="singleProject.length">There's no Information</div>
                     <div class="card-text" v-else>
                         <ul>
-                    <li v-for="item in technologiesToPrint">{{ item }}</li>
+                    <li class="text-danger" v-for="item in technologiesToPrint">{{ item }}</li>
                   </ul>
                     </div>
                   </div>
