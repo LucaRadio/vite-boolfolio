@@ -1,1 +1,12 @@
 @use "bootstrap/scss/bootstrap";
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+
+    .card-text {
+        flex-grow: 1;
+    }
+
+
+}
